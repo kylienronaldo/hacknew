@@ -45,10 +45,12 @@
             <span class="material-icons-sharp"> quiz </span>
             <h3>FAQ</h3>
           </a>
-          <a href="login.html">
-            <span class="material-icons-sharp"> logout </span>
+          <a href="login.html" onclick="alert('logging out!')">
+            <span class="material-icons-sharp">
+                logout
+            </span>
             <h3>Logout</h3>
-          </a>
+        </a>
         </div>
       </aside>
       <!-- End of Sidebar Section -->
@@ -152,7 +154,7 @@
         </div>
             <div id="ticketContainer" class="main_container">
               <h2>Submit a Ticket</h2>
-              <form id="ticketForm">
+              <form id="ticketForm" action="javascript:submitForm()">
                 <label for="subject">Subject:</label>
                 <input type="text" id="subject" name="subject" required />
                 <div id="subjectError" class="error-message"></div>
@@ -190,6 +192,9 @@
       </div>
     </div>
   </body>
+  <script>
+
+</script>
 
   <script type="module" src="admin.js"></script>
 </html>

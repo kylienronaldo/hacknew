@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="manage.css">
+    
     <title>Manage</title>
 </head>
 
@@ -44,17 +45,9 @@
                     </span>
                     <h3>Analytics</h3>
                 </a>
-                <a href="tickets.html">
-                    <span class="material-icons-sharp">
-                        mail_outline
-                    </span>
-                    <h3>Tickets</h3>
-                    <span class="message-count">2</span>
-                </a>
-        
                 <a href="manage.html" class="active">
                     <span class="material-icons-sharp">
-                        report_gmailerrorred
+                        manage_accounts
                     </span>
                     <h3>Manage</h3>
                 </a>
@@ -64,7 +57,7 @@
                     </span>
                     <h3>New Login</h3>
                 </a>
-                <a href="login.html">
+                <a href="#">
                     <span class="material-icons-sharp">
                         logout
                     </span>
@@ -104,55 +97,18 @@
     
                 </div>
             </div>
-            <div class="book">
-                <div class="addbook">
-                    <h2>Add Book</h2>
-                    <form action="/action_page.php" novalidate>
-                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
-                        <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
-                        <input type="submit" style="border: none;" value="Add" class="submit">
-                    </form>
-                </div>
-
-                <div class="removebook">
-                    <h2>Remove Book</h2>
-                    <form action="/action_page.php" novalidate>
-                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
-                        <input type="submit" style="border: none;" value="Remove" class="submit">
-                    </form>
-                </div>
-            </div>
-
-            <div class="down">
-                <div class="addbook">
-                    <h2>Add Book</h2>
-                    <form action="/action_page.php" novalidate>
-                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
-                        <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
-                        <input type="submit" style="border: none;" value="Add" class="submit">
-                    </form>
-                </div>
-            </div>
-
-            <div class="down">
-                <div class="removebook">
-                    <h2>Remove Book</h2>
-                    <form action="/action_page.php" novalidate>
-                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
-                        <input type="submit" style="border: none;" value="Remove" class="submit">
-                    </form>
-                </div>
-            </div>
+     
 
             <div class="down">
                 <div class="approval">
                     <div class="section2">
                         <h2>Approval and Late Fee : </h2>
-                        <form action="/action_page.php" novalidate>
-                            <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
-                            <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
-                            <input type="submit" style="border: none;" value="Approve" class="submit">
-                        </form>
+                        <form >
+                            <input type="text" id="opt" placeholder="Enter Book ID" required><br><br>
+                            <br><br>
+                            <button id="show" class="hye">search</button>
+                            <button id="approve" class="hey">approve</button>
+                        </form> 
                     </div>
                     
                     
@@ -167,37 +123,24 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td id="r11"></td>
+                                    <td id="r12"></td>
+                                    <td id="r16"></td>
+                                    <td class="${user.status === 'Blocked' ? 'danger' : user.status === 'Online' ? 'success' : 'primary'}" id="r13"></td>
+                                   
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     
                 </div>
-                <div class="table_mobile">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Book Name</th>
-                                <th>Status</th>
-                                <th>Late Fee</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+                
             </div>
-            
-            
-
         </main>
-        <!-- End of Main Content -->
-
-
-
     </div>
-<!-- 
-    <script src="orders.js" type = "module"></script> -->
+
+    <script type="module" src="manage.js"></script>
     <script src="admin.js"></script>
 </body>
 
