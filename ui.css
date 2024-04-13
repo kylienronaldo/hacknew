@@ -447,7 +447,6 @@ main .search{
     color: var(--color-primary);
     background: var(--color-light);
     cursor: pointer;
-    color: black;
   }
 
   .main-down2{
